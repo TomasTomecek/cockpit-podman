@@ -1,0 +1,13 @@
+summary: Run browser integration tests on the host
+prepare:
+    how: install
+    package:
+    - cockpit-podman
+    - cockpit-ws
+    - git
+    - libvirt-python3
+    - make
+    - npm
+    - python3
+execute:
+    script: plans/browser.sh

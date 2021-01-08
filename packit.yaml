@@ -6,3 +6,10 @@ downstream_package_name: cockpit-podman
 actions:
   post-upstream-clone: make cockpit-podman.spec
   create-archive: make dist-gzip
+jobs:
+  - job: tests
+    trigger: pull_request
+    metadata:
+      targets:
+      # XXX: use fedora-all once this works
+      - fedora-33
